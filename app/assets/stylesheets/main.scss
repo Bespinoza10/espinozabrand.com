@@ -1,0 +1,22 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body nav{
+ background-color: transparent;
+ color: #000;
+}
+
+.main-header{
+  background-image: url('/assets/main-header.jpg');
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  margin-top:-64px;
+}
