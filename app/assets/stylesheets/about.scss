@@ -1,0 +1,27 @@
+$salmon: #f5705a;
+$blue: #444f67;
+$xxlarge-and-up: "(min-width: 1800px)";
+$xlarge-and-up: "(min-width: 1200px)";
+$xlarge-and-down: "(max-width: 1200px)";
+$large-and-up: "(min-width: 993px)";
+$medium-and-down: "(max-width: 992px)";
+$medium-and-up: "(min-width: 992px)";
+$small-and-down: "(max-width: 600px)";
+$small-and-up: "(min-width: 600px)";
+
+#about{
+  background: $blue;
+  .col.s12{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    h2{
+      color: $salmon;
+    }
+    .col.s10 p{
+      color: #fff;
+    }
+  }
+  .divider{
+    background-color: $salmon;
+  }
+}

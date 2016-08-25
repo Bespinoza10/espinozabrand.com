@@ -2,10 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body nav{
- background-color: transparent;
- color: #000;
+$salmon: #f5705a;
+$blue: #444f67;
+$xxlarge-and-up: "(min-width: 1800px)";
+$xlarge-and-up: "(min-width: 1200px)";
+$xlarge-and-down: "(max-width: 1200px)";
+$large-and-up: "(min-width: 993px)";
+$medium-and-down: "(max-width: 992px)";
+$medium-and-up: "(min-width: 992px)";
+$small-and-down: "(max-width: 600px)";
+$small-and-up: "(min-width: 600px)";
+h2{
+  font-weight: 100 !important;
 }
+
+p{
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+
+.center-col{
+  margin: 0 auto !important;
+  float: none !important;
+}
+.right-col{
+  margin: 0 auto;
+  right: 0;
+  float: right !important;
+}
+
+.vertical-center{
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
 
 .main-header{
   background-image: url('/assets/main-header.jpg');
@@ -18,5 +50,38 @@ body nav{
   text-align: center;
   color: white;
   height: 100vh;
-  margin-top:-64px;
+  margin-top:-80px;
+  .container .row .col.s12{
+    padding-top: 25vh;
+    .col.s3 h4{
+      font-weight: 100;
+      padding-top: 2vh;
+      line-height: 140%;
+    }
+    .col.s3 h4.left-align{
+      color: $blue;
+    }
+
+  }
 }
+
+@media #{$xlarge-and-down} {
+  .main-header .container .row .col.s12{
+    padding-top: 25vh;
+  }
+}
+
+@media #{$xxlarge-and-up} {
+  .main-header .container .row .col.s12{
+    padding-top: 40vh;
+    .col.s3 h4.left-align{
+      font-weight: 100;
+      padding-top: 2vh;
+      line-height: 180%;
+    }
+  }
+}
+
+
+@import "nav";
+@import "about";
