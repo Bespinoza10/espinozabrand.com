@@ -9,24 +9,26 @@ $medium-and-up: "(min-width: 992px)";
 $small-and-down: "(max-width: 600px)";
 $small-and-up: "(min-width: 600px)";
 
-body nav{
- background-color: transparent;
- color: #000;
- box-shadow: none;
- .nav-padding{
-  padding: 20px;
- }
- .brand-logo img{
-   max-height: 75px;
-   width: auto;
- }
- ul li > a{
-   color: $blue;
-   font-weight: 400;
-   font-size: 18px;
- }
-}
 
-nav.navbar-fixed{
-  height: 100px;
+.service-icon{
+  max-height: auto;
+  max-width: 100%;
+}
+#what-we-do{
+  .col.s12{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    h2{
+      color: $blue;
+    }
+    .col.s10 p{
+      color: $blue;
+    }
+  }
+  .divider{
+    background-color: $blue;
+  }
+  .icons{
+    padding-top:10%;
+  }
 }

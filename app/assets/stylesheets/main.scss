@@ -50,9 +50,9 @@ p{
   text-align: center;
   color: white;
   height: 100vh;
-  margin-top:-80px;
+  margin-top:-100px;
   .container .row .col.s12{
-    padding-top: 25vh;
+    padding-top: 20vh;
     .col.s3 h4{
       font-weight: 100;
       padding-top: 2vh;
@@ -73,7 +73,7 @@ p{
 
 @media #{$xxlarge-and-up} {
   .main-header .container .row .col.s12{
-    padding-top: 40vh;
+    padding-top: 35vh;
     .col.s3 h4.left-align{
       font-weight: 100;
       padding-top: 2vh;
