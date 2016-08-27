@@ -6,26 +6,36 @@ class MessagesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "Successful post" do
-    post :create, message: {
-      name: 'cornholio',
-      email: 'cornholio@example.com',
-      number: '222-222-2222',
-      content: 'bai'
-    }
+  test "succesful post" do
+    assert_difference 'ActionMailer::Base.deliveries.size', 1 do
+      post :create, message: {
+        name: 'cornholio',
+        email: 'cornholio@example.com',
+        number: '444-444-4444',
+        content: 'bai'
+      }
+    end
 
     assert_redirected_to new_message_path
+    last_email = ActionMailer::Base.deliveries.last
+
+    assert_equal "Email From Website", last_email.subject
+    assert_equal 'espinozab100@gmail.com', last_email.to[0]
+    assert_equal 'cornholio@example.com', last_email.from[0]
+    assert_match(/bai/, last_email.body.to_s)
+
+    ActionMailer::Base.deliveries.clear
   end
 
   test "failed post" do
     post :create, message: {\
       name: '',
       email: '',
-      subject: '',
+      number: '',
       content: ''
     }
 
-    [:name, :email, :subject, :content].each do |attr|
+    [:name, :email, :number, :content].each do |attr|
       assert_select 'li', "#{attr.capitalize} can't be blank"
     end
   end
