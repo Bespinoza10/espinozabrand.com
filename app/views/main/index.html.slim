@@ -63,24 +63,5 @@ header.main-header
         .divider
       .col.s10.center-col
         p.center Contact us for a <b>FREE</b> quote or just say hi
-      .row
-        form.col.s12.center-col
-          .row
-            .input-field.col.s4
-              input#first_name.validate[type="text"]
-              label[for="first_name"]
-                | Full Name
-            .input-field.col.s4
-              input#last_name.validate[type="text"]
-              label[for="phone_number"]
-                | Phone Number
-            .input-field.col.s4
-              input#email.validate[type="email"]
-              label[for="email" data-error="wrong" data-success="right"]
-                | Email
-          .row
-            .input-field.col.s12
-              textarea#textarea1.materialize-textarea
-              label[for="textarea1"]
-                | Textarea
-            
+      .col.s10.center-col
+        //- render :template => 'messages/new'
