@@ -10,25 +10,21 @@ $small-and-down: "(max-width: 600px)";
 $small-and-up: "(min-width: 600px)";
 
 
-.service-icon{
-  max-height: auto;
-  max-width: 100%;
-}
-#what-we-do{
+#contact{
+  background: $salmon;
+  color: #fff;
   .col.s12{
-    padding-top: 8%;
-    padding-bottom: 8%;
-    h2{
-      color: $blue;
-    }
-    .col.s10 p{
-      color: $blue;
+   padding-top: 8%;
+   padding-bottom: 8%;
+  }
+  input, textarea{
+    border-bottom-color: #fff;
+    &:focus{
+      border-bottom-color: $blue;
+      box-shadow: 0 2px 0 0 $blue;
     }
   }
-  .divider{
-    background-color: $blue;
-  }
-  .icons{
-    padding-top:10%;
+  label{
+    color: #fff;
   }
 }
