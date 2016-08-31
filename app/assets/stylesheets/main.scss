@@ -65,6 +65,11 @@ p{
   }
 }
 
+
+.hidden-input{
+  display: none;
+}
+
 @media #{$xlarge-and-down} {
   .main-header .container .row .col.s12{
     padding-top: 25vh;

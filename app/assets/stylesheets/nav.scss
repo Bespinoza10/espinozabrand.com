@@ -1,5 +1,6 @@
 $salmon: #f5705a;
 $blue: #444f67;
+$medium-grey: #8c8c8c;
 $xxlarge-and-up: "(min-width: 1800px)";
 $xlarge-and-up: "(min-width: 1200px)";
 $xlarge-and-down: "(max-width: 1200px)";
@@ -29,4 +30,22 @@ body nav{
 
 nav.navbar-fixed{
   height: 100px;
+}
+
+#notice-wrapper{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1050;
+  background: $salmon;
+  box-shadow: 5px 17px 10px -10px $blue;
+  p{
+    padding: 1.5rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+
+    color: #fff;
+    letter-spacing: 2px;
+  }
 }

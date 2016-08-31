@@ -1,0 +1,28 @@
+= form_for @contact do |f|
+  form.col.s12.center-col
+    .row
+      .input-field.col.s4
+        = f.text_field :name, required: true, class: "validate", id: "first_name"
+
+        label
+          | Full Name
+
+      .input-field.col.s4
+        = f.email_field :email, required: true, class: "validate"
+
+        label data-error="wrong" data-success="right" for="email"  Email
+
+
+      .input-field.col.s4
+        = f.text_field :number, class: "validate"
+
+        label
+          | Phone Number
+    .row
+      .input-field.col.s12
+        = f.text_area :message, id: "textare1", class: "materialize-textarea"
+
+        label[for="textarea1"]
+          | Message
+
+      = f.submit 'Yes! Send It!', class: " btn waves-effect waves-light"

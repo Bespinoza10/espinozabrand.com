@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'main#index'
-  resources :contacts, only: [:new, :create]
+  resources :contacts, only: [:create]
 
 end
