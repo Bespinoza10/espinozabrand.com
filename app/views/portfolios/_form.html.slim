@@ -1,0 +1,31 @@
+= form_for @portfolio do |f|
+  - if @portfolio.errors.any?
+    h2
+      = pluralize(@portfolio.errors.count, "error")
+      |  prevented this project from saving:
+    ul
+      - @portfolio.errors.full_messages.each do |msg|
+        li
+          = msg
+  .row
+    .input-field.col.s6
+      = f.text_field :name, required: true, class: "validate"
+
+      label
+        | Project Name
+
+    .input-field.col.s6
+      = f.text_field :link, class: "validate"
+
+      label
+        | Link
+
+  .row
+    .input-field.col.s12
+      = f.text_area :description, required: true, class: "materialize-textarea"
+
+      label
+        | Description
+
+    .col.s4
+      = f.submit 'Add Project', class: " submit-btn btn waves-effect waves-light"
