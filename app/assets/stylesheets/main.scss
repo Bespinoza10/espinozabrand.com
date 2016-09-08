@@ -23,6 +23,18 @@ p{
 }
 
 
+.blue-font{
+  color: $blue;
+}
+
+.salmon-font{
+  color: $salmon;
+}
+
+.white-font{
+  color: #fff;
+}
+
 .center-col{
   margin: 0 auto !important;
   float: none !important;
@@ -52,16 +64,17 @@ p{
   height: 100vh;
   margin-top:-100px;
   .container .row .col.s12{
-    padding-top: 20vh;
-    .col.s3 h4{
+    padding-top: 30vh;
+
+    h2{
+      letter-spacing: 5px;
       font-weight: 100;
-      padding-top: 2vh;
-      line-height: 140%;
-    }
-    .col.s3 h4.left-align{
-      color: $blue;
     }
 
+    h4{
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
   }
 }
 
@@ -72,7 +85,7 @@ p{
 
 @media #{$xlarge-and-down} {
   .main-header .container .row .col.s12{
-    padding-top: 25vh;
+    padding-top: 40vh;
   }
 }
 

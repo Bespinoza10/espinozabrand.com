@@ -10,18 +10,18 @@ $small-and-down: "(max-width: 600px)";
 $small-and-up: "(min-width: 600px)";
 
 #about{
-  background: $blue;
+  background: $salmon;
   .col.s12{
     padding-top: 8%;
     padding-bottom: 8%;
     h2{
-      color: $salmon;
+      color: #fff;
     }
     .col.s10 p{
       color: #fff;
     }
   }
   .divider{
-    background-color: $salmon;
+    background-color: #fff;
   }
 }
