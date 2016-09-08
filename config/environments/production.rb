@@ -90,7 +90,7 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-  # Sets paperclip images to amazon s3
+  # Sets paperclip images to amazon s3  
   config.paperclip_defaults = {
     storage: :s3,
     s3_credentials: {
