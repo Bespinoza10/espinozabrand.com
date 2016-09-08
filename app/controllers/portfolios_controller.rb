@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+  before_action :find_portfolio,  only: [:show, :edit, :update, :destroy]
+
 
   def index
     @portfolio = Portfolio.all.order("created_at desc")
@@ -42,11 +44,11 @@ class PortfoliosController < ApplicationController
 
   def find_portfolio
     # @portfolio = portfolio.friendly.find(params[:id])
-    @portfolio = portfolio.find(params[:id])
+    @portfolio = Portfolio.find(params[:id])
   end
 
   def portfolio_params
-    params.require(:portfolio).permit(:name, :description, :link, :slug)
+    params.require(:portfolio).permit(:name, :description, :link, :image, :slug)
   end
 
 end
