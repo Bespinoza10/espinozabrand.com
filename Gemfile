@@ -28,6 +28,8 @@ gem 'slim', '~> 3.0', '>= 3.0.7'
 gem 'materialize-sass'
 
 gem 'paperclip'
+
+gem 'aws-sdk'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
