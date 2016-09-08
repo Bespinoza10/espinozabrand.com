@@ -1,5 +1,6 @@
 $salmon: #f5705a;
 $blue: #444f67;
+$light-grey: rgba(#818791, 0.38);
 $xxlarge-and-up: "(min-width: 1800px)";
 $xlarge-and-up: "(min-width: 1200px)";
 $xlarge-and-down: "(max-width: 1200px)";
@@ -28,7 +29,20 @@ $small-and-up: "(min-width: 600px)";
   .divider{
     background-color: $blue;
   }
-  .icons{
-    padding-top:10%;
+}
+
+.icons{
+  h4, p{
+    color: $blue;
   }
+}
+
+.grey-serv-bg{
+  background: $light-grey;
+  padding: 5% 0 5% 0;
+}
+
+.white-serv-bg{
+  background: #fff;
+  padding: 5% 0 5% 0;
 }
