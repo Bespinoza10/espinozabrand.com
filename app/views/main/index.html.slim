@@ -1,35 +1,6 @@
-header.main-header
-  .container
-    .row
-      .col.s12
-          h2.center.white-font
-            | Design + Development = Our Work
+= render :partial => "main/header"
 
-          h4.center.salmon-font
-            | We make unique and Modern designs for your business
-
-
-.row#about
-  .container
-    .col.s12
-      h2.center
-        | About Us
-      .col.s6.center-col
-        .divider
-      .col.s10.center-col
-        p.center Espinozabrand is formed by a group of developers from North America. We work hard to always satisfy your needs by taking in mind your thoughts and opinions. You play an important crucial role for us to deliver your business the best product possible.
+= render :partial => "main/about_us"
 
 = render :partial => "main/what_we_do"
-
-
-.row#contact
-  .container
-    .col.s12
-      h2.center
-        | Contact Us
-      .col.s6.center-col
-        .divider
-      .col.s10.center-col
-        p.center Contact us for a <b>FREE</b> quote or just say hi
-      .row
-        = render :template => "contacts/new"
+= render :partial => "main/contact"
