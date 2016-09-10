@@ -17,4 +17,7 @@ $small-and-up: "(min-width: 600px)";
 
 #portfolio{
   background: $blue;
+  .portfolio-img{
+    max-width:100%;
+  }
 }
