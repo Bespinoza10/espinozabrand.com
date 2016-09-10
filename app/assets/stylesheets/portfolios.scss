@@ -1,3 +1,20 @@
 // Place all the styles related to the Portfolios controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+$salmon: #f5705a;
+$blue: #444f67;
+$light-grey: rgba(#818791, 0.38);
+$xxlarge-and-up: "(min-width: 1800px)";
+$xlarge-and-up: "(min-width: 1200px)";
+$xlarge-and-down: "(max-width: 1200px)";
+$large-and-up: "(min-width: 993px)";
+$medium-and-down: "(max-width: 992px)";
+$medium-and-up: "(min-width: 992px)";
+$small-and-down: "(max-width: 600px)";
+$small-and-up: "(min-width: 600px)";
+
+#portfolio{
+  background: $blue;
+}

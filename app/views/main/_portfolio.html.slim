@@ -1,0 +1,9 @@
+.row#portfolio
+  .col.s10.center-col
+    - @portfolio.each do |portfolio|
+      .col.s4
+        = image_tag portfolio.image.url(:medium)
+        h1
+          = link_to portfolio.name, portfolio
+        = portfolio.name
+        = portfolio.description
