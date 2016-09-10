@@ -1,6 +1,6 @@
 = @portfolio.name
-= @portfolio.description
-= image_tag @portfolio.image.url(:large)
+= @portfolio.work
+= image_tag @portfolio.image_main.url(:large)
 
 = link_to 'Edit', edit_portfolio_path(@portfolio)
 br

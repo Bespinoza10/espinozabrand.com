@@ -2,9 +2,9 @@
   .col.s10.center-col
     .col.s12
       - @portfolio.each do |portfolio|
-        .col.s4
-          = image_tag portfolio.image.url, class: "portfolio-img"
-          h1
-            = link_to portfolio.name, portfolio
-          = portfolio.name
-          = portfolio.description
+        .col.s4.portfolio-cols
+          = image_tag portfolio.image_main.url, class: "portfolio-img"
+        //  h1
+        //    = link_to portfolio.name, portfolio
+        //  = portfolio.name
+        //  = portfolio.work

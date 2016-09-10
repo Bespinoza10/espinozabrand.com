@@ -15,14 +15,29 @@ ActiveRecord::Schema.define(version: 20160905031959) do
 
   create_table "portfolios", force: :cascade do |t|
     t.string   "name"
-    t.text     "description"
+    t.string   "work"
+    t.text     "web_description"
+    t.text     "logo_description"
+    t.text     "bc_description"
     t.string   "link"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "image_main_file_name"
+    t.string   "image_main_content_type"
+    t.integer  "image_main_file_size"
+    t.datetime "image_main_updated_at"
+    t.string   "web_image_file_name"
+    t.string   "web_image_content_type"
+    t.integer  "web_image_file_size"
+    t.datetime "web_image_updated_at"
+    t.string   "logo_image_file_name"
+    t.string   "logo_image_content_type"
+    t.integer  "logo_image_file_size"
+    t.datetime "logo_image_updated_at"
+    t.string   "bc_image_file_name"
+    t.string   "bc_image_content_type"
+    t.integer  "bc_image_file_size"
+    t.datetime "bc_image_updated_at"
   end
 
 end

@@ -19,22 +19,73 @@
 
       label
         | Link
+
+
     .input-field.col.s4
+      = f.text_field :work, class: "validate"
+
+      label
+        | Type
+
+  .row
+    .input-field.col.s3
       .file-field.input-field
         .btn
           span
-            | File
-          = f.file_field :image, class: "validate"
-          
+            | Main Img
+          = f.file_field :image_main, class: "validate"
+
+        .file-path-wrapper
+          input.file-path.validate[type="text"]
+
+
+    .input-field.col.s3
+      .file-field.input-field
+        .btn
+          span
+            | Web Img
+          = f.file_field :web_image, class: "validate"
+
+        .file-path-wrapper
+          input.file-path.validate[type="text"]
+    .input-field.col.s3
+      .file-field.input-field
+        .btn
+          span
+            | Logo Img
+          = f.file_field :logo_image, class: "validate"
+
+        .file-path-wrapper
+          input.file-path.validate[type="text"]
+
+    .input-field.col.s3
+      .file-field.input-field
+        .btn
+          span
+            | BC Img
+          = f.file_field :bc_image, class: "validate"
+
         .file-path-wrapper
           input.file-path.validate[type="text"]
 
   .row
-    .input-field.col.s12
-      = f.text_area :description, required: true, class: "materialize-textarea"
+    .input-field.col.s4
+      = f.text_area :web_description, class: "materialize-textarea"
 
       label
-        | Description
+        | Web Description
+
+    .input-field.col.s4
+      = f.text_area :logo_description, class: "materialize-textarea"
+
+      label
+        | Logo Description
+
+    .input-field.col.s4
+      = f.text_area :bc_description, class: "materialize-textarea"
+
+      label
+        | Business Card Description
 
     .col.s4
       = f.submit 'Add Project', class: " submit-btn btn waves-effect waves-light"
