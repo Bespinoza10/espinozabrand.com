@@ -52,7 +52,7 @@ p{
 
 
 .main-header{
-  background-image: url('/assets/main-header.jpg');
+  background-image: url('/assets/main-header1.jpg');
   background-attachment: scroll;
   background-position: center center;
   -webkit-background-size: cover;
@@ -63,17 +63,20 @@ p{
   color: white;
   height: 100vh;
   margin-top:-100px;
-  .container .row .col.s12{
+  .container .row .col.s8{
     padding-top: 30vh;
 
     h2{
       letter-spacing: 5px;
       font-weight: 100;
-    }
-
-    h4{
-      font-weight: 300;
-      letter-spacing: 2px;
+      span{
+        color: $salmon;
+      }
+      .header-bold{
+        font-style: italic;
+        font-weight: 400;
+        color: #fff;
+      }
     }
   }
 }
@@ -84,13 +87,13 @@ p{
 }
 
 @media #{$xlarge-and-down} {
-  .main-header .container .row .col.s12{
+  .main-header .container .row .col.s8{
     padding-top: 40vh;
   }
 }
 
 @media #{$xxlarge-and-up} {
-  .main-header .container .row .col.s12{
+  .main-header .container .row .col.s8{
     padding-top: 35vh;
     .col.s3 h4.left-align{
       font-weight: 100;
