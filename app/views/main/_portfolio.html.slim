@@ -1,9 +1,11 @@
 .row#portfolio
   .col.s10.center-col
-    .col.s12
+    h1.center
+      | Our Portfolio
+    .col.s12.portfolio-overlay
       - @portfolio.each do |portfolio|
-        .col.s4.portfolio-cols
-          = image_tag portfolio.image_main.url, class: "portfolio-img"
+        .col.s4.portfolio-cols.images
+            = link_to (image_tag portfolio.image_main.url, class: "portfolio-img"), portfolio
         //  h1
         //    = link_to portfolio.name, portfolio
         //  = portfolio.name

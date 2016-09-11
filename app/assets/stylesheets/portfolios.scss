@@ -17,14 +17,59 @@ $small-and-up: "(min-width: 600px)";
 
 #portfolio{
   background: $blue;
-  .portfolio-cols{
-    padding: 0;
+  div.portfolio-cols{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     .portfolio-img{
-      // width: 100%;
+
       object-fit: cover;
-      width: 400px;
+      max-width: 380px;
       height: 250px;
+
+      &:hover{
+        background-color: $salmon;
+        transition: ease-in-out all;
+      }
 
     }
   }
 }
+
+  .images {
+      position:relative;
+  }
+  .images img {
+      width:100%;
+      vertical-align:top;
+  }
+  .images:after, .images:before {
+      position:absolute;
+      opacity:0;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+  }
+  .images:after {
+      content:'\A';
+      width:100%;
+      top:0;
+      // z-index: 1;
+      background:rgba(#f56f59, 0.72);
+  }
+  .images:before {
+      content: attr(data-content);
+      width:100%;
+      color:#fff;
+      z-index:1;
+      bottom:0;
+      top: 0;
+      padding:4px 10px;
+      text-align:center;
+      background:red;
+      box-sizing:border-box;
+      -moz-box-sizing:border-box;
+  }
+  .images:hover:after, .images:hover:before {
+      opacity:1;
+  }
