@@ -1,12 +1,20 @@
+
 .row#portfolio
-  .col.s10.center-col
+  .container
     h1.center
       | Our Portfolio
+
+
+
     .col.s12.portfolio-overlay
       - @portfolio.each do |portfolio|
-        .col.s4.portfolio-cols.images
-            = link_to (image_tag portfolio.image_main.url, class: "portfolio-img"), portfolio
+        .col.l4.m6.s12.caption.portfolio-cols
+          = link_to (image_tag portfolio.image_main.url, class: "portfolio-img"), portfolio
+          .caption-overlay
+            h1 = link_to portfolio.name, portfolio
+            p = link_to portfolio.web_description, portfolio
+
         //  h1
-        //    = link_to portfolio.name, portfolio
+        //    , portfolio
         //  = portfolio.name
         //  = portfolio.work
