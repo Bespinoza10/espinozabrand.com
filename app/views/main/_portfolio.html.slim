@@ -11,8 +11,9 @@
         .col.l4.m6.s12.caption.portfolio-cols
           = link_to (image_tag portfolio.image_main.url, class: "portfolio-img"), portfolio
           .caption-overlay
-            h1 = link_to portfolio.name, portfolio
-            p = link_to portfolio.web_description, portfolio
+            h5 = link_to portfolio.name, portfolio
+            .divider
+            p = link_to portfolio.work, portfolio
 
         //  h1
         //    , portfolio
