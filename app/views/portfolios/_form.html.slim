@@ -15,13 +15,19 @@
         | Project Name
 
     .input-field.col.s4
+      = f.text_field :small_desc, class: "validate"
+
+      label
+        | Small Description
+
+    .input-field.col.s4
       = f.text_field :link, class: "validate"
 
       label
         | Link
 
 
-  
+
   .row
     .input-field.col.s3
       .file-field.input-field
