@@ -2,6 +2,12 @@
 = @portfolio.work
 = image_tag @portfolio.image_main.url(:large)
 
-= link_to 'Edit', edit_portfolio_path(@portfolio)
+= link_to 'Edit', edit_portfolio_path(@portfolio), class: "btn"
+
 br
-= link_to 'Back', portfolios_path
+
+= link_to 'Back', portfolios_path, class: "btn"
+
+br
+
+= link_to "Delete", portfolio_path(@portfolio), method: :delete, data: { confirm: "Are you sure you want to delete this Client?"}, class: "btn"
