@@ -1,6 +1,7 @@
 $salmon: #f5705a;
 $blue: #444f67;
 $xxlarge-and-up: "(min-width: 1800px)";
+$xxlarge-and-down: "(max-width: 1800px)";
 $xlarge-and-up: "(min-width: 1200px)";
 $xlarge-and-down: "(max-width: 1200px)";
 $large-and-up: "(min-width: 993px)";
@@ -9,15 +10,13 @@ $medium-and-up: "(min-width: 992px)";
 $small-and-down: "(max-width: 600px)";
 $small-and-up: "(min-width: 600px)";
 
-@media #{$xlarge-and-down} {
-  .main-header .container .row .col.l8{
-    padding-top: 42vh;
-  }
-}
 
 @media #{$xxlarge-and-up} {
   .main-header .container .row .col.l8{
     padding-top: 35vh;
+    h2{
+      font-size: 65px;
+    }
     .col.s3 h4.left-align{
       font-weight: 100;
       padding-top: 2vh;
@@ -25,14 +24,38 @@ $small-and-up: "(min-width: 600px)";
     }
   }
 }
+@media #{$xxlarge-and-down} {
+  .main-header .container .row .col.l8{
+    padding-top: 45vh;
+    h2{
+      font-size: 65px;
+    }
+  }
+  @media #{$xlarge-and-down} {
+    .main-header .container .row .col.l8{
+      padding-top: 42vh;
+    }
 
-@media #{$small-and-down}{
-  .main-header{
-    height: 80vh;
-    .container .row .col.s12{
-      padding-top: 25vh;
-      h2{
-        font-size: 30px;
+    @media #{$small-and-up}{
+      .main-header{
+        height: 100vh;
+        .container .row .col.s12{
+          padding-top: 40vh;
+          h2{
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    @media #{$small-and-down}{
+      .main-header{
+        height: 80vh;
+        .container .row .col.s12{
+          padding-top: 25vh;
+          h2{
+            font-size: 30px;
+          }
+        }
       }
     }
   }
