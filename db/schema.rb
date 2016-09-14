@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160905031959) do
+ActiveRecord::Schema.define(version: 20160914193555) do
 
   create_table "portfolios", force: :cascade do |t|
     t.string   "name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20160905031959) do
     t.string   "bc_image_content_type"
     t.integer  "bc_image_file_size"
     t.datetime "bc_image_updated_at"
+    t.string   "small_desc"
   end
 
 end
