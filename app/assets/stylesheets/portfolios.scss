@@ -28,9 +28,10 @@ $small-and-up: "(min-width: 600px)";
       padding-bottom: 0px;
       padding-left: 0px;
       padding-right: 0px;
+      margin-bottom: 0;
       .portfolio-img{
         object-fit: cover;
-        width: 380px;
+        width: 100%;
         height: 250px;
         overflow: none;
       }
