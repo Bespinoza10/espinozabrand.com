@@ -1,7 +1,17 @@
-- @portfolio.each do |portfolio|
-  .col.s4
-    = image_tag portfolio.image_main.url(:medium)
-    h1
-      = link_to portfolio.name, portfolio
-    = portfolio.name
-    = portfolio.work
+.row#portfolio[style= "margin-top:-100px; padding-top:15%;"]
+  .container
+    .col.l12.s12
+      h2.center
+        | Our Portfolio
+      .col.s6.center-col
+        .divider
+    .col.s12.portfolio-section
+      - @portfolio.each do |portfolio|
+        .col.l4.m6.s12.caption.portfolio-cols
+          = link_to (image_tag portfolio.image_main.url, class: "portfolio-img"), portfolio
+          .caption-overlay
+            h5 = link_to portfolio.name, portfolio, class: "portfolio-title-img"
+            .divider
+            p = link_to portfolio.work, portfolio, class: "portfolio-work-img"
+
+            = link_to "View More", portfolio, class: "btn"
