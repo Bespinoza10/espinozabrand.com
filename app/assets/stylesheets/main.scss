@@ -64,9 +64,10 @@ p{
   height: 100vh;
   margin-top:-100px;
   .container .row .col.l8{
-    padding-top: 32vh;
+    padding-top: 32vh !important;
 
     h2{
+      font-size: 50px !important;
       letter-spacing: 5px;
       font-weight: 100;
       span{
