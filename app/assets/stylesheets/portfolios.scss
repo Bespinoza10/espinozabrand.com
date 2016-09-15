@@ -98,3 +98,18 @@ $small-and-up: "(min-width: 600px)";
   }
 
 }
+
+// Show Page
+
+header.show-header{
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+  height: 50vh;
+  margin-top:-100px;
+}

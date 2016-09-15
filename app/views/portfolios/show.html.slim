@@ -1,6 +1,13 @@
-= @portfolio.name
-= @portfolio.work_done
-= image_tag @portfolio.image_main.url(:large)
+header.show-header[style="background-image: url('#{@portfolio.image_main.url}')"]
+.row
+  .container.client_info
+    .col.s12
+      = @portfolio.name
+      = @portfolio.work_done
+
+
+<option value='color_code' style='background-color: color_code'  >color_name</option>
+
 
 = link_to 'Edit', edit_portfolio_path(@portfolio), class: "btn"
 
