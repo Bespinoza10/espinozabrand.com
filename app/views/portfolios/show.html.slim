@@ -1,12 +1,13 @@
 .main-div
   header.show-header[style="background-image: url('#{@portfolio.image_main.url}')" data-adaptive-background="1" data-ab-css-background ]
-  .container
-    .col.s12.target
-      = @portfolio.name
-      = @portfolio.work_done
-      = @portfolio.web_description
+  .row
+    .col.s11.center-col.portfolio-info
+      .card-panel.white
+        span.black-text
+          = @portfolio.name
+          = @portfolio.work_done
+          = @portfolio.web_description
 
-//  img.show-header[src="#{@portfolio.image_main.url}" data-adaptive-background="1"]
 
 
   br
