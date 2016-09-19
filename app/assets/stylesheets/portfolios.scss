@@ -102,6 +102,7 @@ $small-and-up: "(min-width: 600px)";
 // Show Page
 
 header.show-header{
+
   background-attachment: scroll;
   background-position: center center;
   -webkit-background-size: cover;
@@ -112,8 +113,16 @@ header.show-header{
   color: white;
   height: 70vh;
   margin-top:-100px;
+  padding: 5% 0;
+  .header-text{
+    padding: 5% 0;
+    h2{
+      text-align: center;
+    }
+  }
 }
 
 .portfolio-info{
   margin-top: -100px !important;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }

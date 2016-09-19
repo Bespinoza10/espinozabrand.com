@@ -1,12 +1,16 @@
 .main-div
-  header.show-header[style="background-image: url('#{@portfolio.image_main.url}')" data-adaptive-background="1" data-ab-css-background ]
+  header.show-header[style="background-image: url('#{@portfolio.image_main.url}');" data-adaptive-background="1" data-ab-css-background ]
+    .header-text.col.s8.center-col
+      h2
+        = @portfolio.name
   .row
     .col.s11.center-col.portfolio-info
-      .card-panel.white
-        span.black-text
-          = @portfolio.name
-          = @portfolio.work_done
-          = @portfolio.web_description
+      .row.white
+        .col.s12
+          p.black-text
+            = @portfolio.name
+            = @portfolio.work_done
+            = @portfolio.web_description
 
 
 
