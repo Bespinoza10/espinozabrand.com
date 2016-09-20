@@ -70,26 +70,32 @@
           input.file-path.validate[type="text"]
 
   .row
-    .input-field.col.s4
+    .input-field.col.s6
+      = f.text_area :about, class: "materialize-textarea"
+
+      label
+        | About Client
+
+    .input-field.col.s6
       = f.text_area :web_description, class: "materialize-textarea"
 
       label
         | Web Description
 
-    .input-field.col.s4
+  .row
+    .input-field.col.s6
       = f.text_area :logo_description, class: "materialize-textarea"
 
       label
         | Logo Description
-
-    .input-field.col.s4
+    .input-field.col.s6
       = f.text_area :bc_description, class: "materialize-textarea"
 
       label
         | Business Card Description
 
 
-        
+
 
     .col.s4
       = f.submit 'Add Project', class: " submit-btn btn waves-effect waves-light"
