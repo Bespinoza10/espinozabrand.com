@@ -9,23 +9,35 @@
         .col.s12.about
           .col.l5.offset-l1
             h4
-              | About 
+              | About
               = @portfolio.name
             p
               = @portfolio.about
-          //.col.l6.s12.main-imgs[style="background-image: url('#{@portfolio.image_main.url}')"]
+
           .col.l6.s12
-            img.responsive-img[src=@portfolio.image_main.url]
+            img.responsive-img[src= @portfolio.image_main.url]
 
       .row
-        .col.s12.web[data-ab-parent]
-          .col.l6.s12
-            img[src="/assets/gingers-web-image.png" data-adaptive-background]
-          .col.l6.s12
-            h4
-              | Web Design and Development
-            p
-              = @portfolio.web_description
+        - if @portfolio.web_image.blank?
+
+          .col.s12.web[data-ab-parent]
+            .col.l6.s12
+              img[src=@portfolio.bc_image data-adaptive-background]
+            .col.l6.s12
+              h4
+                | Business Card Design
+              p
+                = @portfolio.bc_description
+        - else
+
+          .col.s12.web[data-ab-parent]
+            .col.l6.s12
+              img[src=@portfolio.web_image data-adaptive-background]
+            .col.l6.s12
+              h4
+                | Web Design and Development
+              p
+                = @portfolio.web_description
 
 = @portfolio.about
 = @portfolio.work_done
