@@ -110,7 +110,6 @@ header.show-header{
   background-size: cover;
   -o-background-size: cover;
   text-align: center;
-  color: white;
   height: 80vh;
   margin-top:-100px;
   padding: 6% 0;
@@ -118,9 +117,12 @@ header.show-header{
     padding: 6% 0;
     h2{
       text-align: center;
+
     }
   }
 }
+
+
 
 .portfolio-info{
   margin-top: -80px !important;
@@ -130,6 +132,12 @@ header.show-header{
     padding-top: 8% !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
+  }
+  .bc{
+    img{
+      max-width: 100%;
+    }
+
   }
   .web{
     img{

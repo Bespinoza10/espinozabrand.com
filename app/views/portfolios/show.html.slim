@@ -1,9 +1,10 @@
 .main-div
   header.show-header[style="background-image: url('#{@portfolio.image_main.url}');" ]
     .header-text.col.s8.center-col
-      h2
+      h2.font-color
         = @portfolio.name
-  .row
+
+  .row.dynamic-row
     .col.s11.center-col.portfolio-info
       .row.white
         .col.s12.about
@@ -20,10 +21,10 @@
       .row
         - if @portfolio.web_image.blank?
 
-          .col.s12.web[data-ab-parent]
+          .col.s12.bc[data-ab-parent]
             .col.l6.s12
               img[src=@portfolio.bc_image data-adaptive-background]
-            .col.l6.s12
+            .col.l6.s12.font-color
               h4
                 | Business Card Design
               p
@@ -33,16 +34,16 @@
           .col.s12.web[data-ab-parent]
             .col.l6.s12
               img[src=@portfolio.web_image data-adaptive-background]
-            .col.l6.s12
+            .col.l6.s12.font-color
               h4
                 | Web Design and Development
               p
                 = @portfolio.web_description
 
+
 = @portfolio.about
 = @portfolio.work_done
 = @portfolio.web_description
-
 
 
 br
@@ -64,3 +65,5 @@ javascript:
   $(document).ready(function(){
     $.adaptiveBackground.run();
   });
+
+  
