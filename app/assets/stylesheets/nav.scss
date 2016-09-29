@@ -1,14 +1,4 @@
-$salmon: #f5705a;
-$blue: #444f67;
-$medium-grey: #8c8c8c;
-$xxlarge-and-up: "(min-width: 1800px)";
-$xlarge-and-up: "(min-width: 1200px)";
-$xlarge-and-down: "(max-width: 1200px)";
-$large-and-up: "(min-width: 993px)";
-$medium-and-down: "(max-width: 992px)";
-$medium-and-up: "(min-width: 992px)";
-$small-and-down: "(max-width: 600px)";
-$small-and-up: "(min-width: 600px)";
+@import "modules/all";
 
 body nav{
  background-color: transparent;
@@ -38,7 +28,7 @@ nav.navbar-fixed{
   width: 100%;
   z-index: 1050;
   background: $blue;
-  
+
   p{
     padding: 1.5rem 0;
     text-align: center;
