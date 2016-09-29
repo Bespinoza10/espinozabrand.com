@@ -1,5 +1,5 @@
 .main-div
-  header.show-header[style="background-image: url('#{@portfolio.image_main.url}');" ]
+  header.show-header[style="background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0,0,0,.28)), url('#{@portfolio.image_main.url}'); " ]
     .header-text.col.s8.center-col
       h2.font-color
         = @portfolio.name
@@ -11,7 +11,9 @@
           .col.l5.offset-l1
             h4
               | About
+
               = @portfolio.name
+
             p
               = @portfolio.about
 
@@ -39,11 +41,16 @@
                 | Web Design and Development
               p
                 = @portfolio.web_description
+      .row.white
+        .col.s12.bc-white
+          .col.l6.s12
+            h4
+              | Business Card Design
+            p
+              = @portfolio.bc_description
+          .col.l6.s12
+            img[src=@portfolio.bc_image]
 
-
-= @portfolio.about
-= @portfolio.work_done
-= @portfolio.web_description
 
 
 br
@@ -65,5 +72,3 @@ javascript:
   $(document).ready(function(){
     $.adaptiveBackground.run();
   });
-
-  
