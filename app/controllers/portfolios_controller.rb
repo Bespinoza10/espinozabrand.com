@@ -35,6 +35,8 @@ class PortfoliosController < ApplicationController
     end
   end
 
+
+
   def destroy
     @portfolio.destroy
     redirect_to portfolios_path
@@ -48,7 +50,7 @@ class PortfoliosController < ApplicationController
   end
 
   def portfolio_params
-    params.require(:portfolio).permit(:name, :about, :work_done, :web_description, :logo_description, :bc_description, :link, :image_main, :web_image, :logo_image, :bc_image, :slug)
+    params.require(:portfolio).permit(:name, :about, :work_done, :delete_image, :web_description, :logo_description, :bc_description, :link, :image_main, :web_image, :logo_image, :bc_image, :slug)
   end
 
 end

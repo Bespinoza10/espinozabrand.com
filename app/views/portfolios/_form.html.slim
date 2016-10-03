@@ -34,6 +34,9 @@
         .btn
           span
             | Main Img
+        - if @portfolio.image_main.exists?
+          = image_tag @portfolio.image_main.url(:thumb)
+        - else
           = f.file_field :image_main, class: "validate"
 
         .file-path-wrapper
@@ -45,15 +48,22 @@
         .btn
           span
             | Web Img
+        - if @portfolio.web_image.exists?
+          = image_tag @portfolio.web_image.url(:thumb)
+        - else
           = f.file_field :web_image, class: "validate"
 
         .file-path-wrapper
           input.file-path.validate[type="text"]
+
     .input-field.col.s3
       .file-field.input-field
         .btn
           span
             | Logo Img
+        - if @portfolio.logo_image.exists?
+          = image_tag @portfolio.logo_image.url(:thumb)
+        - else
           = f.file_field :logo_image, class: "validate"
 
         .file-path-wrapper
@@ -64,10 +74,27 @@
         .btn
           span
             | BC Img
+        - if @portfolio.bc_image.exists?
+          = image_tag @portfolio.bc_image.url(:thumb)
+          br
+          br
+          br
+          = f.check_box :delete_image, :label => 'Delete Image', class: "checkboxes"
+        - else
           = f.file_field :bc_image, class: "validate"
 
         .file-path-wrapper
           input.file-path.validate[type="text"]
+
+
+
+
+
+
+
+
+
+
 
   .row
     .input-field.col.s6

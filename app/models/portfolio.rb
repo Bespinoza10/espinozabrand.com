@@ -9,4 +9,16 @@ class Portfolio < ActiveRecord::Base
   validates_attachment_content_type :logo_image, content_type: /\Aimage\/.*\z/
   validates_attachment_content_type :bc_image, content_type: /\Aimage\/.*\z/
 
+
+  before_validation { bc_image.clear if @delete_image }
+
+  def delete_image
+    @delete_image ||= false
+  end
+
+  def delete_image=(value)
+    @delete_image  = !value.to_i.zero?
+  end
+
+
 end

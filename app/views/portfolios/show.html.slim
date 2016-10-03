@@ -5,7 +5,7 @@
         = @portfolio.name
 
   .row.dynamic-row
-    .col.s11.center-col.portfolio-info
+    .col.s11.center-col.portfolio-info[style="background-attachment: fixed;"]
       .row.white
         .col.s12.about
           .col.l5.offset-l1
@@ -41,25 +41,38 @@
                 | Web Design and Development
               p
                 = @portfolio.web_description
-      .row.white
-        .col.s12.bc-white
-          .col.l6.s12
-            h4
-              | Business Card Design
-            p
-              = @portfolio.bc_description
-          .col.l6.s12
-            img[src=@portfolio.bc_image]
 
-      .row
-        .col.s12.logo[data-ab-parent]
-          .col.l6.s12
-            img[src=@portfolio.logo_image data-adaptive-background]
-          .col.l6.s12
-            h4
-              | Logo Design
-            p
-              = @portfolio.logo_description
+      - if @portfolio.bc_image
+        .row.white
+          .col.s12.bc-white
+            .col.l6.s12
+              h4
+                | Business Card Design
+              p
+                = @portfolio.bc_description
+            .col.l6.s12
+              img[src=@portfolio.bc_image]
+
+      - else
+
+        .row.white
+          .col.s12.bc-white[style="display:none;"]
+
+      - if @portfolio.logo_image
+
+        .row
+          .col.s12.logo[data-ab-parent]
+            .col.l6.s12
+              img[src=@portfolio.logo_image data-adaptive-background]
+            .col.l6.s12
+              h4
+                | Logo Design
+              p
+                = @portfolio.logo_description
+      - else
+
+        .row
+          .col.s12.logo[style="display:none;"]
 
 
 
