@@ -20,19 +20,10 @@
           .col.l6.s12
             img.responsive-img[src= @portfolio.image_main.url]
 
-      .row
-        - if @portfolio.web_image.blank?
+      //if statement for first section If web_image exists then show elsif bc_image exists and web_image !exists then show bc content
 
-          .col.s12.bc[data-ab-parent]
-            .col.l6.s12
-              img[src=@portfolio.bc_image data-adaptive-background]
-            .col.l6.s12.font-color
-              h4
-                | Business Card Design
-              p
-                = @portfolio.bc_description
-        - else
-
+      - if @portfolio.web_image.exists?
+        .row
           .col.s12.web[data-ab-parent]
             .col.l6.s12
               img[src=@portfolio.web_image data-adaptive-background]
@@ -42,7 +33,42 @@
               p
                 = @portfolio.web_description
 
-      - if @portfolio.bc_image
+
+      - elsif @portfolio.bc_image.exists?
+
+          .col.s12.bc[data-ab-parent]
+            .col.l6.s12
+              img[src=@portfolio.bc_image data-adaptive-background]
+            .col.l6.s12.font-color
+              h4
+                | Business Card Design
+              p
+                = @portfolio.bc_description
+
+
+
+
+
+      - if @portfolio.web_image.blank? && @portfolio.bc_image.exists?
+        .row[style="display:none;"]
+
+      - elsif @portfolio.bc_image.blank?
+        - if @portfolio.logo_image.blank?
+          .row[style="display:none;"]
+
+        - else
+
+          .row.white
+            .col.s12.logo[data-ab-parent]
+              .col.l6.s12
+                img[src=@portfolio.logo_image data-adaptive-background]
+              .col.l6.s12
+                h4
+                  | Logo Design
+                p
+                  = @portfolio.logo_description
+
+      - elsif @portfolio.bc_image.exists?
         .row.white
           .col.s12.bc-white
             .col.l6.s12
@@ -53,12 +79,8 @@
             .col.l6.s12
               img[src=@portfolio.bc_image]
 
-      - else
 
-        .row.white
-          .col.s12.bc-white[style="display:none;"]
-
-      - if @portfolio.logo_image
+      - if @portfolio.bc_image.exists? && @portfolio.logo_image.exists?
 
         .row
           .col.s12.logo[data-ab-parent]
@@ -69,12 +91,9 @@
                 | Logo Design
               p
                 = @portfolio.logo_description
-      - else
 
-        .row
-          .col.s12.logo[style="display:none;"]
-
-
+      - if @portfolio.logo_image.blank?
+        .row[style="display:none;"]
 
 br
 
