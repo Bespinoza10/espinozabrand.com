@@ -125,6 +125,10 @@ header.show-header{
 
   padding: 0 !important;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.34), 0 2px 10px 0 rgba(0, 0, 0, 0.34);
+  .row{
+    padding: 0 !important;
+    margin-bottom: 0;
+  }
   .about{
     padding-top: 4% !important;
     padding-bottom: 4% !important;
@@ -141,6 +145,7 @@ header.show-header{
   }.logo{
     padding-top: 4% !important;
     padding-bottom: 4% !important;
+    color: #000;
     img{
       max-width: 100%;
     }

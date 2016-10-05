@@ -1,32 +1,27 @@
 .main-div
-  header.show-header[style="background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0,0,0,.28)), url('#{@portfolio.image_main.url}'); " ]
+  header.show-header[style="background-image: url('#{@portfolio.image_main.url}'); " data-adaptive-background="1" data-ab-css-background ]
     .header-text.col.s8.center-col
       h2.font-color
         = @portfolio.name
 
-  .row.dynamic-row
-    .col.s11.center-col.portfolio-info[style="background-attachment: fixed;"]
-      .row.white
+  .row
+    .col.s12.center-col.portfolio-info[style="background-attachment: fixed;"]
+      .row
         .col.s12.about
-          .col.l5.offset-l1
-            h4
-              | About
-
+          .col.l6.center-col
+            h4.center
               = @portfolio.name
 
-            p
+            p.center
               = @portfolio.about
-
-          .col.l6.s12
-            img.responsive-img[src= @portfolio.image_main.url]
 
       //if statement for first section If web_image exists then show elsif bc_image exists and web_image !exists then show bc content
 
       - if @portfolio.web_image.exists?
-        .row
-          .col.s12.web[data-ab-parent]
+        .row.white
+          .col.s12.web
             .col.l6.s12
-              img[src=@portfolio.web_image data-adaptive-background]
+              img[src=@portfolio.web_image]
             .col.l6.s12.font-color
               h4
                 | Web Design and Development
@@ -35,10 +30,10 @@
 
 
       - elsif @portfolio.bc_image.exists?
-
+        .row.dynamic-row
           .col.s12.bc[data-ab-parent]
             .col.l6.s12
-              img[src=@portfolio.bc_image data-adaptive-background]
+              img[src=@portfolio.bc_image]
             .col.l6.s12.font-color
               h4
                 | Business Card Design
@@ -61,13 +56,12 @@
           .row.white
             .col.s12.logo[data-ab-parent]
               .col.l6.s12
-                img[src=@portfolio.logo_image data-adaptive-background]
-              .col.l6.s12
                 h4
                   | Logo Design
-                p
+                p[style="color:#000;"]
                   = @portfolio.logo_description
-
+              .col.l6.s12
+                img[src=@portfolio.logo_image]
 
       // elsif bc_image exists then show it
       - elsif @portfolio.bc_image.exists?
@@ -84,10 +78,10 @@
       // If bc exists and logo exists then show logo and not bc because its already being called above
       - if @portfolio.bc_image.exists? && @portfolio.logo_image.exists?
 
-        .row
-          .col.s12.logo[data-ab-parent]
+        .row.white
+          .col.s12.logo
             .col.l6.s12
-              img[src=@portfolio.logo_image data-adaptive-background]
+              img[src=@portfolio.logo_image]
             .col.l6.s12
               h4
                 | Logo Design

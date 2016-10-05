@@ -11,9 +11,9 @@
 
   var DEFAULTS      = {
     selector:             '[data-adaptive-background]',
-    parent:               'div.dynamic-row',
+    parent:               '.main-div',
     exclude:              [ 'rgb(0,0,0)', 'rgb(255,255,255)' ],
-    normalizeTextColor:   true,
+    normalizeTextColor:   false,
     normalizedTextColors:  {
       light:      "#fff",
       dark:       "#000"

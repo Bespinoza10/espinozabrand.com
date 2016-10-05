@@ -36,6 +36,8 @@
             | Main Img
         - if @portfolio.image_main.exists?
           = image_tag @portfolio.image_main.url(:thumb)
+          br
+          = f.file_field :image_main, class: "validate"
         - else
           = f.file_field :image_main, class: "validate"
 
@@ -63,6 +65,8 @@
             | Logo Img
         - if @portfolio.logo_image.exists?
           = image_tag @portfolio.logo_image.url(:thumb)
+          br
+          = f.file_field :logo_image, class: "validate"
         - else
           = f.file_field :logo_image, class: "validate"
 
