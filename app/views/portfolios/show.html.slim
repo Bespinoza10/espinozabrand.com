@@ -48,10 +48,10 @@
 
 
 
-
+      // if web_image is empty and bc_image exists display none because bc_image is already being called on the if statement above.
       - if @portfolio.web_image.blank? && @portfolio.bc_image.exists?
         .row[style="display:none;"]
-
+      // elsif bc_imageis empty then show logo_image but first check if it is empty and if it is then display none, if not then display
       - elsif @portfolio.bc_image.blank?
         - if @portfolio.logo_image.blank?
           .row[style="display:none;"]
@@ -68,6 +68,8 @@
                 p
                   = @portfolio.logo_description
 
+
+      // elsif bc_image exists then show it
       - elsif @portfolio.bc_image.exists?
         .row.white
           .col.s12.bc-white
@@ -79,7 +81,7 @@
             .col.l6.s12
               img[src=@portfolio.bc_image]
 
-
+      // If bc exists and logo exists then show logo and not bc because its already being called above
       - if @portfolio.bc_image.exists? && @portfolio.logo_image.exists?
 
         .row
@@ -92,6 +94,7 @@
               p
                 = @portfolio.logo_description
 
+      // if logo is empty then display none
       - if @portfolio.logo_image.blank?
         .row[style="display:none;"]
 
