@@ -18,8 +18,8 @@ p{
   color: $blue;
 }
 
-.salmon-font{
-  color: $salmon;
+.mint-font{
+  color: $mint;
 }
 
 .white-font{
@@ -43,7 +43,7 @@ p{
 
 
 .main-header{
-  background-image: url('/assets/main-header1-web.jpg');
+  background-image: url('/assets/main-header1.jpg');
   background-attachment: scroll;
   background-position: center center;
   -webkit-background-size: cover;
@@ -62,7 +62,7 @@ p{
       letter-spacing: 5px;
       font-weight: 100;
       span{
-        color: $salmon;
+        color: $mint;
       }
       .header-bold{
         font-style: italic;

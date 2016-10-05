@@ -16,7 +16,7 @@
   padding-top: 8%;
   padding-bottom: 8%;
   background: $blue;
-  background-image: linear-gradient(10deg, #444f64 50%, #f5705a 105%);
+  background-image: linear-gradient(10deg, #444f64 50%, $mint 105%);
   margin-bottom: 0;
   background-attachment: fixed;
   h2{
@@ -83,7 +83,7 @@
     }
 
     .caption:hover::before {
-        background: rgba(#f5705a, 0.68);
+        background: rgba($mint, 0.68);
     }
 
     .caption {
